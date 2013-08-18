@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B264DB5-B7E3-4055-B108-42614DDAFA17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Labo.WcfTestClient.Win.UI</RootNamespace>
+    <AssemblyName>Labo.WcfTestClient.Win.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.VirtualTreeGrid, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\sharedlibs\Microsoft.VisualStudio.VirtualTreeGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddServiceForm.designer.cs">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractInfo.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberInfo.cs" />
+    <Compile Include="OperationInfo.cs" />
+    <Compile Include="OperationInvokerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OperationInvokerUserControl.designer.cs">
+      <DependentUpon>OperationInvokerUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationParameterTree.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceConfigUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServiceConfigUserControl.Designer.cs">
+      <DependentUpon>ServiceConfigUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceInfo.cs" />
+    <Compile Include="ShowErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowErrorForm.designer.cs">
+      <DependentUpon>ShowErrorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddServiceForm.resx">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationInvokerUserControl.resx">
+      <DependentUpon>OperationInvokerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ServiceConfigUserControl.resx">
+      <DependentUpon>ServiceConfigUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowErrorForm.resx">
+      <DependentUpon>ShowErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Labo.ServiceModel.Core\Labo.ServiceModel.Core.csproj">
+      <Project>{a3f2182d-11f7-44ce-9b32-d3bdb7417440}</Project>
+      <Name>Labo.ServiceModel.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labo.ServiceModel.DynamicProxy\Labo.ServiceModel.DynamicProxy.csproj">
+      <Project>{384717bd-e67e-4b56-8ae6-99d545baeee1}</Project>
+      <Name>Labo.ServiceModel.DynamicProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3F2182D-11F7-44CE-9B32-D3BDB7417440}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Labo.ServiceModel.Core</RootNamespace>
+    <AssemblyName>Labo.ServiceModel.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Conversion\ConversionUtils.cs" />
+    <Compile Include="Utils\Conversion\Exceptions\ConversionException.cs" />
+    <Compile Include="Utils\EnumUtils.cs" />
+    <Compile Include="Utils\Exceptions\EnumUtilsException.cs" />
+    <Compile Include="Utils\Reflection\Class.cs" />
+    <Compile Include="Utils\Reflection\Constants.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodCompiler.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodCompilerCache.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodHelper.cs" />
+    <Compile Include="Utils\Reflection\Exceptions\DynamicMethodCompilerException.cs" />
+    <Compile Include="Utils\Reflection\Exceptions\ReflectionUtilsException.cs" />
+    <Compile Include="Utils\Reflection\Instance.cs" />
+    <Compile Include="Utils\Reflection\Member.cs" />
+    <Compile Include="Utils\Reflection\Method.cs" />
+    <Compile Include="Utils\Reflection\Parameter.cs" />
+    <Compile Include="Utils\Reflection\Property.cs" />
+    <Compile Include="Utils\Reflection\PropertyAccessItem.cs" />
+    <Compile Include="Utils\Reflection\ReflectionUtils.cs" />
+    <Compile Include="Utils\TypeUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
